@@ -1,0 +1,45 @@
+@import "./mediaqueries";
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+
+  grid-template-columns: 60px 1fr;
+}
+
+.navbar {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: red;
+  z-index: 99;
+}
+
+.hero {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: blue;
+}
+
+@include mobile {
+  .grid-container {
+    grid-template-rows: 60px 1fr;
+  }
+  .navbar {
+    grid-column-start: 1;
+    grid-column-end: end;
+    grid-row-end: 1;
+  }
+  .hero {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: end;
+  }
+}
