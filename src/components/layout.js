@@ -27,7 +27,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="grid-container">
-        <div className="navbar">item-1</div>
+        <div className="navbar">
+          <NavBar />
+        </div>
+        <div className="mobile-navbar">item-1.5</div>
         <div className="hero">item-2</div>
       </div>
     </>
