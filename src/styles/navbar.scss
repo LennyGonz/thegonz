@@ -1,13 +1,87 @@
-.rotate {
-  color: red;
-  animation: rotation 2s infinite linear;
+%display {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  background: #181818;
 }
+.nav {
+  @extend %display;
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
+  top: 0;
+  height: 100vh;
+  position: fixed;
+  justify-content: center;
+}
+.navbar-container {
+  @extend %display;
+
+  height: 100vh;
+  position: fixed;
+  justify-content: space-between;
+}
+.logoContainer {
+  width: 60px;
+  height: 60px;
+  background: #070707;
+  padding-top: 2px;
+  padding-left: 2px;
+}
+.logo {
+  height: 55px;
+}
+.navmenu {
+  @extend %display;
+
+  height: 30%;
+  list-style: none;
+  background: pink;
+  justify-content: space-between;
+}
+%item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+}
+.nav-item {
+  @extend %item;
+
+  &__home {
+    color: black;
+    font-size: 1.5em;
   }
-  to {
-    transform: rotate(359deg);
+
+  &__about {
+    font-size: 1.5em;
+  }
+
+  &__skills {
+    font-size: 1.75em;
+  }
+
+  &__projects {
+    font-size: 1.5em;
+  }
+}
+.linksmenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 10%;
+  width: 60px;
+  background: pink;
+}
+.link-item {
+  @extend %item;
+
+  &__linkedin {
+    font-size: 2rem;
+  }
+
+  &__github {
+    font-size: 2rem;
   }
 }
