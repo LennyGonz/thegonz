@@ -21,6 +21,10 @@
   z-index: 99;
 }
 
+.mobile-navbar {
+  display: none;
+}
+
 .hero {
   grid-row-start: 1;
   grid-row-end: 3;
@@ -29,16 +33,24 @@
 
 @include mobile {
   .grid-container {
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: 60px 60px 1fr;
   }
   .navbar {
     grid-column-start: 1;
     grid-column-end: end;
     grid-row-end: 1;
   }
-  .hero {
+  .mobile-navbar {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: end;
     grid-row-start: 2;
     grid-row-end: 3;
+    background: peru;
+  }
+  .hero {
+    grid-row-start: 3;
+    grid-row-end: end;
     grid-column-start: 1;
     grid-column-end: end;
   }
