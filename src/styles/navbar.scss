@@ -1,3 +1,6 @@
+@import "./mediaqueries";
+@import "./variables";
+
 %display {
   width: 60px;
   display: flex;
@@ -34,54 +37,88 @@
 
   height: 30%;
   list-style: none;
-  background: pink;
+  justify-content: space-between;
+}
+.linksmenu {
+  @extend %display;
+
+  height: 10%;
+  align-items: space-between;
   justify-content: space-between;
 }
 %item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 60px;
-  height: 40px;
+  height: 60px;
+  display: flex;
   cursor: pointer;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 }
 .nav-item {
   @extend %item;
 
   &__home {
-    color: black;
+    color: white;
     font-size: 1.5em;
   }
 
   &__about {
+    color: white;
     font-size: 1.5em;
   }
 
   &__skills {
+    color: white;
     font-size: 1.75em;
   }
 
   &__projects {
+    color: white;
     font-size: 1.5em;
   }
 }
-.linksmenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: space-between;
-  height: 10%;
-  width: 60px;
-  background: pink;
+.nav-item:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
 }
 .link-item {
   @extend %item;
 
   &__linkedin {
-    font-size: 2rem;
+    color: white;
+    font-size: 1.75rem;
   }
 
   &__github {
-    font-size: 2rem;
+    color: white;
+    font-size: 1.75rem;
+  }
+}
+.link-item__linkedin:hover {
+  color: #0a66c2;
+  box-shadow: 0 0 5px #0a66c2;
+  text-shadow: 0 0 5px #0a66c2;
+}
+
+.link-item__github:hover {
+  color: #ffffff;
+  box-shadow: 0 0 5px #ffffff;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+@include mobile {
+  .nav {
+    flex-direction: row;
+  }
+  .navbar-container {
+    flex-direction: row;
+  }
+  .navmenu {
+    flex-direction: row;
+  }
+  .linksmenu {
+    flex-direction: row;
   }
 }
