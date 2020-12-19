@@ -15,18 +15,18 @@ class NavBar extends Component {
             <img className="logo" src={LogoImg} alt="logo" />
           </div>
           <ul className="navmenu">
-            <nav className="nav-item nav-item__home">
+            <li className="nav-item nav-item__home">
               <IoHome />
-            </nav>
-            <nav className="nav-item nav-item__about">
+            </li>
+            <li className="nav-item nav-item__about">
               <FaUserAstronaut />
-            </nav>
-            <nav className="nav-item nav-item__skills">
+            </li>
+            <li className="nav-item nav-item__skills">
               <GiGearHammer />
-            </nav>
-            <nav className="nav-item nav-item__projects">
+            </li>
+            <li className="nav-item nav-item__projects">
               <IoFolderOpenSharp />
-            </nav>
+            </li>
           </ul>
           <div className="linksmenu">
             <div className="link-item link-item__linkedin">
