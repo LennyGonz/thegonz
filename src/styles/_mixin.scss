@@ -1,0 +1,6 @@
+@mixin fullNav($display, $flexdirection, $width, $height, $justifycontent) {
+  width: $width;
+  height: $height;
+  display: $display;
+  flex-direction: $flexdirection; 
+}
