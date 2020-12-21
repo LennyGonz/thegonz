@@ -8,18 +8,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import NavBar from "./navbar"
+import NavBar from "./navbar";
+import MobileNav from "./mobile";
 import "../styles/layout.scss"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="grid-container">
-        <div className="navbar">
+      <div>
+        <div>
           <NavBar />
         </div>
-        <div className="mobile-navbar">item-1.5</div>
-        <div className="hero">item-2</div>
+        <div>
+          <MobileNav />
+        </div>
+        <div>item-2</div>
       </div>
     </>
   )
