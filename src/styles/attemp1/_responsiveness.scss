@@ -1,5 +1,0 @@
-@mixin mobile {
-  @media only screen and (min-width: $iphonemin) and (max-width: $iphonemax) {
-    @content;
-  }
-}
