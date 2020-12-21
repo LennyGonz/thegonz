@@ -9,9 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import NavBar from "./navbar";
-import MobileNav from "./mobile";
-import Hero from "./hero";
-import "../styles/layout.scss"
+// import MobileNav from "./mobile";
+// import Hero from "./hero";
+import './layout.css'
 
 const Layout = ({ children }) => {
   return (
@@ -20,12 +20,12 @@ const Layout = ({ children }) => {
         <div>
           <NavBar />
         </div>
-        <div>
+        {/* <div>
           <MobileNav />
         </div>
         <div>
           <Hero />
-        </div>
+        </div> */}
       </div>
     </>
   )
