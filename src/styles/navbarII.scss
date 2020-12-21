@@ -1,5 +1,0 @@
-@import "./_mixin";
-
-.nav {
-  @include fullNav(flex, column, 60px, 100vh, center);
-}
