@@ -1,46 +1,57 @@
-import React, { Component } from 'react';
-import { FaUserAstronaut } from "@react-icons/all-files/fa/FaUserAstronaut";
-import { IoFolderOpenSharp, IoHome, IoMenu } from "react-icons/io5";
-import { GiGearHammer } from "@react-icons/all-files/gi/GiGearHammer";
-import { SiLinkedin, SiGithub } from "react-icons/si";
+import React from 'react';
+import { FaBars } from 'react-icons/fa';
 import LogoImg from '../../images/teddy-bear.png';
-import '../../styles/navbar.scss';
+//import { SiLinkedin, SiGithub } from "react-icons/si";
+// import { IoFolderOpenSharp, IoHome, IoMenu } from "react-icons/io5";
+// import { GiGearHammer } from "@react-icons/all-files/gi/GiGearHammer";
+// import { FaUserAstronaut } from "@react-icons/all-files/fa/FaUserAstronaut";
+import { AboutBtn, Github, HomeBtn, LinksMenu, LinkedIn, LogoContainer, Logo, MobileIcon, Nav, NavLink, NavItem, NavMenu, NavbarContainer, ProjectBtn, SkillsBtn } from './NavbarElements';
 
-class NavBar extends Component {
-  render() {
-    return (
-      <nav className="nav">
-        <div className="logoContainer">
-          <img className="logo" src={LogoImg} alt="logo" />
-        </div>
-        <ul className="navmenu">
-          <li className="nav-item nav-item__home">
-            <IoHome />
-          </li>
-          <li className="nav-item nav-item__about">
-            <FaUserAstronaut />
-          </li>
-          <li className="nav-item nav-item__skills">
-            <GiGearHammer />
-          </li>
-          <li className="nav-item nav-item__projects">
-            <IoFolderOpenSharp />
-          </li>
-        </ul>
-        <ul className="linksmenu">
-          <li className="link-item link-item__linkedin">
-            <SiLinkedin />
-          </li>
-          <li className="link-item link-item__github">
-            <SiGithub />
-          </li>
-        </ul>
-        <div className="mobile-view">
-          <IoMenu />
-        </div>
-      </nav>
-    )
-  }
+const NavBar = ({ toggle }) => {
+  return (
+    <Nav>
+      <NavbarContainer>
+        <LogoContainer to="/">
+          <Logo src={ LogoImg } alt="bebe oso - logo" />
+        </LogoContainer>
+        <MobileIcon onClick={toggle}>
+          <FaBars />
+        </MobileIcon>
+
+        <NavMenu>
+          <NavItem>
+            <NavLink to="/">
+              <HomeBtn />
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/about">
+              <AboutBtn />
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/skills">
+              <SkillsBtn />
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/projects">
+              <ProjectBtn />
+            </NavLink>
+          </NavItem>
+        </NavMenu>
+
+        <LinksMenu>
+          <NavItem>
+            <LinkedIn />
+          </NavItem>
+          <NavItem>
+            <Github />
+          </NavItem>
+        </LinksMenu>
+      </NavbarContainer>
+    </Nav>
+  )
 }
 
 export default NavBar;
