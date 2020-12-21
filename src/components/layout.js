@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 
 import NavBar from "./navbar";
 import MobileNav from "./mobile";
+import Hero from "./hero";
 import "../styles/layout.scss"
 
 const Layout = ({ children }) => {
@@ -22,7 +23,9 @@ const Layout = ({ children }) => {
         <div>
           <MobileNav />
         </div>
-        <div>item-2</div>
+        <div>
+          <Hero />
+        </div>
       </div>
     </>
   )
