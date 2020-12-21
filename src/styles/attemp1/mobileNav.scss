@@ -1,0 +1,23 @@
+@import "./_mixin";
+@import "./variables";
+@import "_responsiveness.scss";
+
+.nav {
+  display: none;
+}
+
+.navmenu {
+  display: none;
+}
+
+.nav-item {
+  display: none;
+}
+
+.linksmenu {
+  display: none;
+}
+
+.link-item {
+  display: none;
+}

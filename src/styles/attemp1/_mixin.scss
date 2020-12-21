@@ -1,0 +1,17 @@
+@mixin fullNav($display, $flexdirection, $width, $height, $justifycontent, $background) {
+  width: $width;
+  height: $height;
+  display: $display;
+  background: $background;
+  flex-direction: $flexdirection; 
+}
+
+@mixin navItem($display, $width, $height, $cursor, $alignItems, $justifyContent, $color) {
+  color: $color;
+  width: $width;
+  height: $height;
+  cursor: $cursor;
+  display: $display;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
