@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import NavBar from "./navbar";
-// import MobileNav from "./mobile";
+import MobileNav from "./mobile";
 // import Hero from "./hero";
 import './layout.css'
 
@@ -20,10 +20,10 @@ const Layout = ({ children }) => {
         <div>
           <NavBar />
         </div>
-        {/* <div>
+        <div>
           <MobileNav />
         </div>
-        <div>
+        {/* <div>
           <Hero />
         </div> */}
       </div>
