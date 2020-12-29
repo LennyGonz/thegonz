@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from 'react';
 import PropTypes from "prop-types"
 
 import NavBar from "./navbar";
@@ -14,14 +14,16 @@ import MobileNav from "./mobile";
 import './layout.css'
 
 const Layout = ({ children }) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <div>
         <div>
-          <NavBar />
+          <NavBar open={open} setOpen={setOpen} />
         </div>
         <div>
-          <MobileNav />
+          <MobileNav open={open} setOpen={setOpen} />
         </div>
         {/* <div>
           <Hero />
