@@ -15,6 +15,9 @@ export const Nav = styled.nav`
     width: 100vw;
     height: 60px;
     top: 120px;
+    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+    transition-property: opacity, right;
+    transition: 0.4s ease-in-out;
   }
 `;
 export const NavMenuMobile = styled.ul`
