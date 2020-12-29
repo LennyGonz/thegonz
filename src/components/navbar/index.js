@@ -7,15 +7,15 @@ import LogoImg from '../../images/teddy-bear.png';
 // import { FaUserAstronaut } from "@react-icons/all-files/fa/FaUserAstronaut";
 import { AboutBtn, Github, HomeBtn, LinksMenu, LinkedIn, LogoContainer, Logo, MobileIcon, Nav, NavLink, NavItem, NavMenu, NavbarContainer, ProjectBtn, SkillsBtn } from './NavbarElements';
 
-const NavBar = ({ toggle }) => {
+const NavBar = ({ open, setOpen }) => {
   return (
     <Nav>
       <NavbarContainer>
         <LogoContainer to="/">
           <Logo src={ LogoImg } alt="bebe oso - logo" />
         </LogoContainer>
-        <MobileIcon onClick={toggle}>
-          <FaBars />
+        <MobileIcon>
+          <FaBars open={open} onClick={() => setOpen(!open)} />
         </MobileIcon>
 
         <NavMenu>
