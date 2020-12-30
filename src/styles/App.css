@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.children {
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: 80px;
+  margin-right: 80px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .children {
+    top: 130px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
