@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Layout from "../components/layout";
 
 function about() {
   return (
-    <div>
+    <Layout>
       <h1> About Page </h1>
-    </div>
+    </Layout>
   )
 }
 
