@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Layout from "../components/layout";
 
 function skills() {
   return (
-    <div>
+    <Layout>
       <h1> Skills Page </h1>
-    </div>
+    </Layout>
   )
 }
 
