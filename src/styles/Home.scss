@@ -1,0 +1,58 @@
+@import "./mediaqueries";
+
+.grid-container {
+  top: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60px auto auto;
+  grid-template-rows: 100vh;
+
+  @include desktop {
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
+  }
+}
+
+.nav {
+  grid-column: 1 / 2;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.item-1 {
+  display: grid;
+  grid-column: 2 / 3;
+  background: pink;
+  justify-items: center;
+  align-items: center;
+
+  @include desktop {
+    left: 70px;
+    grid-row: 1 / 2;
+  }
+
+  @include mobile {
+    top: 125px;
+  }
+}
+
+.item-2 {
+  display: grid;
+  grid-column: 3 / 4;
+  background: blue;
+  justify-items: center;
+  align-items: center;
+
+  @include desktop {
+    left: 70px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  @include mobile {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+}
