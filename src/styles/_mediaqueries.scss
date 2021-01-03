@@ -1,0 +1,15 @@
+@import "./_variables";
+
+// Hald Screen normal screens
+@mixin desktop {
+  @media screen and (max-width: $half-screen) {
+    @content;
+  }
+}
+
+// Mobile Devices
+@mixin mobile {
+  @media screen and (min-width: $minmobile) and (max-width: $maxmobile) {
+    @content;
+  }
+}
