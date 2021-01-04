@@ -5,9 +5,9 @@ import NavBar from "./navbar";
 import MobileNav from "./mobile";
 // import Hero from "./hero";
 import './layout.css'
-import '../styles/App.css'
+import '../styles/App.scss'
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -19,9 +19,6 @@ const Layout = ({ children }) => {
         <div>
           <MobileNav open={open} setOpen={setOpen} />
         </div>
-        <main className="children">
-          {children}
-        </main>
       </div>
     </>
   )
