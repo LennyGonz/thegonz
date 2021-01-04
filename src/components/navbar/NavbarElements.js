@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
+  z-index: 99;
   top: 0;
 
   @media screen and (min-width: 360px) and (max-width: 896px) {
@@ -45,7 +45,7 @@ export const LogoContainer = styled(Link)`
   cursor: pointer;
   width: 60px;
   height: 60px;
-  background: pink;
+  background: #070707;
 `;
 
 export const Logo = styled.img`
@@ -103,6 +103,7 @@ export const NavLink = styled(Link)`
   cursor: pointer;
 
   &.active {
+    color: pink;
     border-bottom: 3px solid #01bf71;
   }
 `;
@@ -135,6 +136,16 @@ export const LinksMenu = styled.ul`
   @media screen and (min-width: 360px) and (max-width: 896px) {
     display: none;
   }
+`;
+
+export const LinksItem = styled.div`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
 `;
 
 export const LinkedIn = styled(SiLinkedin)`
