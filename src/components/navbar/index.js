@@ -5,7 +5,7 @@ import LogoImg from '../../images/teddy-bear.png';
 // import { IoFolderOpenSharp, IoHome, IoMenu } from "react-icons/io5";
 // import { GiGearHammer } from "@react-icons/all-files/gi/GiGearHammer";
 // import { FaUserAstronaut } from "@react-icons/all-files/fa/FaUserAstronaut";
-import { AboutBtn, Github, HomeBtn, LinksMenu, LinkedIn, LogoContainer, Logo, MobileIcon, Nav, NavLink, NavItem, NavMenu, NavbarContainer, ProjectBtn, SkillsBtn } from './NavbarElements';
+import { AboutBtn, Github, HomeBtn, LinksMenu, LinksItem, LinkedIn, LogoContainer, Logo, MobileIcon, Nav, NavLink, NavItem, NavMenu, NavbarContainer, ProjectBtn, SkillsBtn } from './NavbarElements';
 
 const NavBar = ({ open, setOpen }) => {
   return (
@@ -20,34 +20,34 @@ const NavBar = ({ open, setOpen }) => {
 
         <NavMenu>
           <NavItem>
-            <NavLink to="/">
+            <NavLink to="/" activeClassName="active" >
               <HomeBtn />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/about">
+            <NavLink to="/about" activeClassName="active" >
               <AboutBtn />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/skills">
+            <NavLink to="/skills" activeClassName="active" >
               <SkillsBtn />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/projects">
+            <NavLink to="/projects" activeClassName="active" >
               <ProjectBtn />
             </NavLink>
           </NavItem>
         </NavMenu>
 
         <LinksMenu>
-          <NavItem>
+          <LinksItem>
             <LinkedIn />
-          </NavItem>
-          <NavItem>
+          </LinksItem>
+          <LinksItem>
             <Github />
-          </NavItem>
+          </LinksItem>
         </LinksMenu>
       </NavbarContainer>
     </Nav>
