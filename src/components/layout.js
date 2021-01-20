@@ -7,7 +7,7 @@ import MobileNav from "./mobile";
 import './layout.css'
 import '../styles/App.scss'
 
-const Layout = () => {
+const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -18,6 +18,9 @@ const Layout = () => {
         </div>
         <div>
           <MobileNav open={open} setOpen={setOpen} />
+        </div>
+        <div className="children">
+          {children}
         </div>
       </div>
     </>
