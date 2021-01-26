@@ -1,0 +1,18 @@
+@import "./mediaqueries";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.children {
+  position: absolute;
+  top: 0;
+  margin-top: 60px;
+
+  @include mobile {
+    top: 60px;
+  }
+}
