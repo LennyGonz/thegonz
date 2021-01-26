@@ -2,10 +2,11 @@
 
 .grid-container {
   top: 0;
+  margin-left: 60px;
   height: 100vh;
   display: grid;
-  grid-template-columns: 60px auto auto;
-  grid-template-rows: 100vh;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
 
   @include desktop {
     grid-template-columns: 100vw;
